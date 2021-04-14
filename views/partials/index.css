@@ -1,0 +1,8 @@
+body{
+    background-color: black;
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
