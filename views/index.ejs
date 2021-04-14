@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="container"style="color: darkgreen;">
+    <header class="jumbotron" style="color: darkgrey;">
+        <div class="container" >
+            <h1>HERE you go.......</h1>
+         
+            <p>The easiest way to showcase yor talent and checkout the masterpieces of others to soothe your eye</p>
+            <p>
+                <a class="btn btn-primary btn-large color: darkgreen" href="/campgrounds/new" style="color: rgb(64, 116, 64);">Add your captures</a>
+            </p>
+        </div>
+    </header>
+    <div class="row" style= "margin: 0 auto;">
+        <% campgrounds.forEach(function(campgrounds){ %>
+            <div class="col-md-4 col-sm-6" style="color: rgb(7, 46, 7);">
+                <div class= "container thumbnail">
+                    <img src="<%= campgrounds.image %>" alt="<%= campgrounds.name %>" height="200px">
+                </div>
+                <div class="caption">
+                    <h3><%= campgrounds.name %></h3>
+                </div>
+                <p>
+                    <a class="btn primary" href="/campgrounds/<%= campgrounds._id %>" style="color: rgb(60, 87, 25);"">Inspect </a>
+                </p>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
